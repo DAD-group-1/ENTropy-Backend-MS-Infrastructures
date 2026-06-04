@@ -1,8 +1,8 @@
 import { InternalCampus } from '@dad-group-1/backend-common';
 import { Entity, OneToMany } from 'typeorm';
-import { Room } from './room.entity';
-import { RoomType } from './room-type.entity';
-import { Building } from './building.entity';
+import { Room } from '../../rooms/entities/room.entity';
+import { RoomType } from '../../rooms/entities/room-type.entity';
+import { Building } from '../../buildings/entities/building.entity';
 
 @Entity()
 export class Campus extends InternalCampus {

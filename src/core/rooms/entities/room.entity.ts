@@ -1,7 +1,7 @@
 import { Entity, JoinColumn, ManyToOne } from 'typeorm';
 import { InternalRoom } from '@dad-group-1/backend-common';
-import { Campus } from './campus.entity';
-import { Building } from './building.entity';
+import { Campus } from '../../campuses/entities/campus.entity';
+import { Building } from '../../buildings/entities/building.entity';
 import { RoomType } from './room-type.entity';
 
 @Entity()

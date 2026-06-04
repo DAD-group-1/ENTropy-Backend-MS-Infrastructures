@@ -1,8 +1,8 @@
 import dataSource from './data-source';
-import { Campus } from '../core/infrastructure/entities/campus.entity';
-import { Building } from '../core/infrastructure/entities/building.entity';
-import { RoomType } from '../core/infrastructure/entities/room-type.entity';
-import { Room } from '../core/infrastructure/entities/room.entity';
+import { Campus } from '../core/campuses/entities/campus.entity';
+import { Building } from '../core/buildings/entities/building.entity';
+import { RoomType } from '../core/rooms/entities/room-type.entity';
+import { Room } from '../core/rooms/entities/room.entity';
 import { CampusStatus, RoomStatus } from '@dad-group-1/backend-common';
 
 // Helper to build a room entry with all required fields

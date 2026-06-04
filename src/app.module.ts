@@ -1,6 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { InfrastructureModule } from './core/infrastructure/infrastructure.module';
+import { CampusesModule } from './core/campuses/campuses.module';
+import { RoomsModule } from './core/rooms/rooms.module';
+import { BuildingsModule } from './core/buildings/buildings.module';
 
 @Module({
   imports: [
@@ -8,7 +10,9 @@ import { InfrastructureModule } from './core/infrastructure/infrastructure.modul
       isGlobal: true,
       envFilePath: ['.env'],
     }),
-    InfrastructureModule,
+    CampusesModule,
+    RoomsModule,
+    BuildingsModule,
   ],
 })
 export class AppModule {}
