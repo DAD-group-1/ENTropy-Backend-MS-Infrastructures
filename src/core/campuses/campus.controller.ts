@@ -17,7 +17,7 @@ export class CampusController {
     return this.campusService.create(data);
   }
 
-  @MessagePattern({ cmd: 'find_all_campuss' })
+  @MessagePattern({ cmd: 'find_all_campuses' })
   findAll(query: PaginationQueryDto) {
     return this.campusService.findAll(query);
   }
