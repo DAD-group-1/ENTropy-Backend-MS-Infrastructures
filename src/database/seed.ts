@@ -1,7 +1,7 @@
 import dataSource from './data-source';
 import { Campus } from '../core/campuses/entities/campus.entity';
 import { Building } from '../core/buildings/entities/building.entity';
-import { RoomType } from '../core/rooms/entities/room-type.entity';
+import { RoomType } from '../core/room-types/entities/room-type.entity';
 import { Room } from '../core/rooms/entities/room.entity';
 import { CampusStatus, RoomStatus } from '@dad-group-1/backend-common';
 
