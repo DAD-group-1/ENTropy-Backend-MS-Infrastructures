@@ -1,31 +1,8 @@
 services:
-  ms-infrastructures-postgresql-db:
-    image: postgres:18
-    container_name: entropy_infrastructures_postgresql
-    restart: unless-stopped
-    env_file: .env
-    environment:
-      POSTGRES_DB: entropy_infrastructures_db
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-    ports:
-      - '5434:5432'
-    volumes:
-      - postgres_data:/var/lib/postgresql
-
   entropy-backend-ms-infrastructures:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: entropy_backend_ms_infrastructures
-    depends_on:
-      - ms-infrastructures-postgresql-db
     ports:
-      - '3001:3001'
-    volumes:
-      - .:/app
-
-volumes:
-  postgres_data:
-  postgres_replica_data:
-
+      - '3006:3006'
