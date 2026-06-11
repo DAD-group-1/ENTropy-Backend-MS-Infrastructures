@@ -14,16 +14,19 @@ export class BuildingController {
 
   @MessagePattern({ cmd: 'create_building' })
   async create(@Payload() data: CreateBuildingRequestDto) {
+    this.logger.log('Creating a new building record');
     return this.buildingService.create(data);
   }
 
   @MessagePattern({ cmd: 'find_all_buildings' })
   findAll(query: PaginationQueryDto) {
+    this.logger.log('Retrieving all building records with pagination');
     return this.buildingService.findAll(query);
   }
 
   @MessagePattern({ cmd: 'find_one_building' })
   findOne(@Payload() id: number) {
+    this.logger.log('Retrieving building record with ID: ' + id);
     return this.buildingService.findOne(id);
   }
 
@@ -35,11 +38,13 @@ export class BuildingController {
       updateData: UpdateBuildingRequestDto;
     },
   ) {
+    this.logger.log('Updating building record with ID: ' + payload.id);
     return this.buildingService.update(payload.id, payload.updateData);
   }
 
   @MessagePattern({ cmd: 'remove_building' })
   remove(@Payload() id: number) {
+    this.logger.log('Removing building record with ID: ' + id);
     return this.buildingService.remove(id);
   }
 }
